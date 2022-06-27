@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+                    body{
+              background-image: url("https://i.pinimg.com/originals/a1/19/d4/a119d427bac57ccfb7b0167632159bb9.png");
+              background-repeat: no-repeat;
+              background-size: cover;
+          }
+            a#a01:link, a#a01:visited {
+        background-color: rgb(201, 77, 139);
+        color: rgb(167, 51, 51);
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+
+        }
+
+        a#a01:hover, a#a01:active {
+        background-color: rgb(214, 27, 183);
+        }
+
+        table {
+          width:90%;
+        }
+        table, th, td {
+          border:1.8px solid rgb(0, 0, 0);
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 15px;
+          text-align: right;
+        }
+        table#t01 tr:nth-child(odd) {
+          background-color: #e48faf;
+        }
+        table#t01 tr:nth-child(even) {
+          background-color:#e48faf;
+        }
+        table#t01 th {
+          background-color: #e02e72;
+          color: #11093f;
+        }
+        </style>
+    </head>
+    <body>
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k" crossorigin="anonymous">
+        </script>
+    
+        <div class="bg-color"></div>
+        <div class="bg-text">
+
+            <div class="container-fluid">
+                <br><br><br><br>
+                <ul>
+                {%for item in result%}
+
+                <table id="t01" align="center">
+                    <tbody><tr>
+                        <th>اسم نقاش</th><td>{{ item.name }}</td>
+                    </tr>
+                    <tr>
+                        <th>بیوگرافی</th><td>{{ item.biography}}</td>
+                    </tr>
+                    <tr>
+                        <th>اسم نقاشی</th><td>{{ item.paintingname}}</td>
+                    </tr>
+                    <tr>
+                        <th>توضیح درباره نقاشی</th><td>{{ item.description }}</td>
+                    </tr>
+                    <tr>
+                        <th>تصویر</th><td><img src="{{ item.paintinglink }}" alt="1" width="200" height="300" ></td>
+                    </tr>
+                </tbody></table>
+
+                <br><br>
+                <br><br>
+                <br><br>
+                {% endfor %}
+              </ul>
+              
+        
+        
+            </div>
+            <br> 
+        
+    </body>
+</html>

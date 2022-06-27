@@ -1,0 +1,63 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe compile active file",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-c",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.o"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build test",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [                
+                "${fileDirname}\\mycode.o",
+                "${fileDirname}\\s29_test.o",
+                "-o",
+                "${fileDirname}\\s29_test.exe"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build main",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [                
+                "${fileDirname}\\mycode.o",
+                "${fileDirname}\\s29_main.o",
+                "-o",
+                "${fileDirname}\\s29_main.exe"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "dependsOn":[
+                "C/C++: g++.exe compile active file"
+            ]
+        }        
+    ],
+    "version": "2.0.0"
+}

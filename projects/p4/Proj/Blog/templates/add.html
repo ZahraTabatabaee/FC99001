@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <style>
+          body{
+              background-image: url("https://i.pinimg.com/originals/a1/19/d4/a119d427bac57ccfb7b0167632159bb9.png");
+              background-repeat: no-repeat;
+              background-size: cover;
+          }
+          .form-group{
+            max-width: 600px;
+            margin: auto;
+
+        
+          }
+
+          a:link, a:visited {
+            background-color: hsl(332, 78%, 48%);
+            color: rgb(102, 34, 62);
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none ;
+            widows: 40% ;
+            display: grid;
+            width: auto ;
+
+            }
+
+            a:hover, a:active {
+            background-color: rgb(57, 154, 218);
+            }
+
+            body, html {
+            height: 100%;
+            }
+
+            /* Position text in the middle of the page/image */
+            .bg-text {
+            background-color: rgb(83, 73, 73); /* Fallback color */
+            background-color: rgba(255, 255, 255, 0.4); /* Black w/opacity/see-through */
+            color: rgb(207, 45, 134);
+            font-weight: bold;
+            border: 5px solid #e02e72;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 58%;
+            padding: 20px;
+            text-align: center;
+            }
+        
+      </style>
+        <div class="bg-color"></div>
+        <div class="bg-text">
+            <title>اضافه کردن نقاش جدید</title>
+            <h1>فرم اضافه کردن نقاش جدید</h1>
+      <form action="{% url 'add'%}" method="POST">
+          <br>
+        <div dir="rtl" align="right">
+        <div class="form-group">
+          <label for="">     اسم نقاش     </label>
+          
+          <datalist id="painters">
+        
+            
+            {% for i in result %}
+             <option value ="{{i}}" >
+            {% endfor %}
+    
+            
+              </datalist>
+          <input type="text" name="inp_name" list="painters" class="form-control" placeholder="اسم نقاش را وارد کنید">                
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="">بیوگرافی</label>
+          <textarea class="form-control" name="inp_biography" id="" rows="3" placeholder="بیوگرافی نقاش را در چند خط وارد کنید"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for=""> اسم نقاشی</label>
+          <textarea class="form-control" name="inp_paintingname" id="" rows="2" placeholder="اسم اثر نقاش را وارد کنید"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="">توضیح درباره نقاشی</label>
+          <textarea class="form-control" name="inp_description" id="" rows="2" placeholder="توضیح کوتاه مثل سال و هدف از کشیدن این نقاشی"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="">     لینک تصویر     </label>
+            <input type="text" name="inp_paintinglink" class="form-control" placeholder="لطفا لینک تصویر نقاشی را وارد کنید">  
+        </div>
+        <br><br>
+        <button type="submit" onclick="alert('{{ response }}')" style="margin-right: 46%; background-color: rgb(220, 20, 113); border-color: rgb(220, 20, 113); width: 70px;"  class="btn btn-primary">تائید</button>
+
+      </div>
+      </form>
+  </body>
+</html>

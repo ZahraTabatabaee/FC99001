@@ -1,0 +1,11 @@
+cmd.exe                       4608 Console                   13     15,916 K
+Teams.exe                    14948 Console                   13    192,812 K
+Teams.exe                     5008 Console                   13    229,844 K
+Teams.exe                    13924 Console                   13     45,004 K
+Teams.exe                     1208 Console                   13     75,824 K
+Teams.exe                    16556 Console                   13    361,008 K
+Teams.exe                     4848 Console                   13     59,480 K
+Teams.exe                      836 Console                   13    222,408 K
+Teams.exe                     3492 Console                   13    448,336 K
+Teams.exe                    12212 Console                   13     81,360 K
+Teams.exe                    10644 Console                   13     75,844 K

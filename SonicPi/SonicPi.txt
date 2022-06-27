@@ -1,0 +1,205 @@
+chords = [(chord :f4 , :major ), (chord :g4 , :major ), (chord  :A4 , :m ), (chord  :c4 , :major )].ring
+with_synth :fm do
+  live_loop :me do
+    sample :ambi_drone, amp: 0.04
+    sleep 0.5
+  end
+  live_loop :me1 do
+    sample :ambi_glass_hum, amp: 0.04
+    sleep 0.75
+  end
+  live_loop :me3 do
+    sample :ambi_piano, amp: 0.04
+    sleep 0.5
+  end
+  live_loop :me4 do
+    sample :bass_trance_c, amp: 0.04
+    sleep 0.5
+  end
+  live_loop :me5 do
+    sample :drum_cymbal_closed, amp: 0.5
+    sleep 0.5
+  end
+  with_fx :reverb do
+    2.times do
+      2.times do
+        play chords[0] , release: 0.5
+        sleep 0.5
+        play chords[1], release: 0.5
+        sleep 0.25
+        play chords[2] , release: 0.5
+        sleep 0.5
+        play chords[2] , release: 0.25
+        sleep 0.25
+        play chords[2] , release: 0.25
+        sleep 0.5
+      end
+      play chords[3] , release: 0.5
+      sleep 0.5
+      play chords[3] , release: 0.5
+      sleep 0.5
+      play chords[3] , release: 0.5
+      sleep 0.5
+      play chords[3] , release: 0.5
+      sleep 0.5
+    end
+  end
+  
+  
+  play chords[3] , release:4 ,amp: 0.25
+  play :C5 , release: 0.5
+  sleep 0.5
+  play :B4 , release: 0.5
+  sleep 0.5
+  play :A4 , release: 0.5
+  sleep 0.5
+  play :E4 , release: 0.5
+  sleep 0.5
+  
+  play chords[2] , release:4 ,amp: 0.25
+  play :C4 , release: 1
+  sleep 1
+  play :A4 , release: 1
+  sleep 1
+  
+  play chords[3]  , release:4,amp: 0.25
+  play :C5 , release: 0.5
+  sleep 0.5
+  play :B4 , release: 0.5
+  sleep 0.5
+  play :A4 , release: 0.5
+  sleep 0.5
+  play :E4 , release: 0.5
+  sleep 0.5
+  
+  play chords[2] , release:4 ,amp: 0.25
+  play :C4 , release: 0.5
+  sleep 0.5
+  play :C4 , release: 0.25
+  sleep 0.25
+  play :C4 , release: 0.25
+  sleep 0.25
+  play :E4 , release: 0.5
+  sleep 0.5
+  play :A4 , release: 0.5
+  sleep 0.5
+  
+  play chords[3] , release:4 ,amp: 0.25
+  play :C5 , release: 0.5
+  sleep 0.5
+  play :B4 , release: 0.5
+  sleep 0.5
+  play :A4 , release: 0.5
+  sleep 0.5
+  play :E4 , release: 0.5
+  sleep 0.5
+  
+  play chords[2] , release:4 ,amp: 0.25
+  play :C4 , release: 1
+  sleep 1
+  play :A4 , release: 1
+  sleep 1
+  
+  play chords[3] , release:4,amp: 0.25
+  play :C5 , release: 0.5
+  sleep 0.5
+  play :B4 , release: 0.5
+  sleep 0.5
+  play :A4 , release: 0.5
+  sleep 0.5
+  play :E4 , release: 0.5
+  sleep 0.5
+  
+  play chords[2] , release:4 ,amp: 0.25
+  play :C4 , release: 2
+  sleep 2
+  
+  play chords[3] , release:4 ,amp: 0.25
+  play :E4 , release: 0.5
+  sleep 0.5
+  play :E4 , release: 0.25
+  sleep 0.25
+  play :E4 , release: 0.25
+  sleep 0.25
+  play :E4 , release: 0.5
+  sleep 0.5
+  play :G4 , release: 0.5
+  sleep 0.5
+  
+  play chords[0] , release:4 ,amp: 0.25
+  play :F4 , release: 1
+  sleep 1
+  play :A4 , release: 1
+  sleep 1
+  
+  play chords[1] , release:4 ,amp: 0.25
+  play :G4 , release: 0.5
+  sleep 0.5
+  play :G4 , release: 0.5
+  sleep 0.5
+  play :G4 , release: 0.5
+  sleep 0.5
+  play :C4 , release: 0.5
+  sleep 0.5
+  
+  play chords[3] , release:4 ,amp: 0.25
+  play :E4 , release: 1
+  sleep 2
+  
+  
+  play :D4 , release: 0.75
+  sleep 0.75
+  play :D4 , release: 0.25
+  sleep 0.25
+  play :D4 , release: 0.5
+  sleep 0.5
+  play :F4 , release: 0.5
+  sleep 0.5
+  
+  play chords[0] , release:4 ,amp: 0.25
+  play :A4 , release: 1
+  sleep 1
+  play :G4 , release: 1
+  sleep 1
+  
+  
+  play :B4 , release: 0.5
+  sleep 0.5
+  play :B4 , release: 0.25
+  sleep 0.25
+  play :B4 , release: 0.25
+  sleep 0.25
+  play :A4 , release: 0.5
+  sleep 0.5
+  play :B4 , release: 0.5
+  sleep 0.5
+  
+  play chords[3] , release:4 , amp: 0.25
+  play :C5 , release: 2
+  sleep 2
+  with_fx :reverb do
+    2.times do
+      2.times do
+        play chords[0] , release: 0.5
+        sleep 0.5
+        play chords[1], release: 0.5
+        sleep 0.25
+        play chords[2] , release: 0.5
+        sleep 0.5
+        play chords[2] , release: 0.25
+        sleep 0.25
+        play chords[2] , release: 0.25
+        sleep 0.5
+      end
+      play chords[3] , release: 0.5
+      sleep 0.5
+      play chords[3] , release: 0.5
+      sleep 0.5
+      play chords[3] , release: 0.5
+      sleep 0.5
+      play chords[3] , release: 0.5
+      sleep 0.5
+    end
+  end
+  
+end

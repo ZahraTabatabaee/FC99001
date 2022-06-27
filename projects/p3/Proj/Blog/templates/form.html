@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title> FORM </title>
+    </head>
+    <body>
+            <h1> Learning Requests </h1>
+            <form action="{% url 'form'%}" method="POST">
+                <label for="">Username ra vared kon?</label>
+                <input type="text" name="user_name" id="Username">
+
+                <input type="password" name="">
+                <br>
+                <lable for="int"> your number</lable>
+                <input type="number" name="int">
+                <input type="submit" value="submit Form" >
+
+
+            </form>
+            <ul>
+                {% for item in my_numbers %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>            
+        </body>
+    <script>
+    </script>
+</html>
